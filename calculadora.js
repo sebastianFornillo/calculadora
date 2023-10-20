@@ -5,21 +5,11 @@ const desactivarPantalla = document.querySelector(".desactivar-pantalla");
 const boton = document.querySelectorAll(".btn");
 const digitos = [];
 
-/* es una función que actualiza el contenido de los elementos activarPantalla y desactivarPantalla con los valores actuales del array digitos. */
+/*  actualiza el contenido de los elementos activarPantalla y desactivarPantalla con los valores actuales del array digitos. */
 
 function update(){
     activarPantalla.textContent = digitos.join('') 
     desactivarPantalla.textContent = eval(digitos.join('')) 
-}
-
-/* es una función que cambia las clases de los elementos activarPantalla y desactivarPantalla para mostrar la pantalla normal de la calculadora. */
-
-function toNormal() {
-    activarPantalla.classList.add('activarPantalla') 
-    activarPantalla.classList.remove('desactivarPantalla')
-    desactivarPantalla.classList.remove('activarPantalla');
-    desactivarPantalla.classList.add('desactivarPantalla');
-    
 }
 
 /* es una función que iguala los resultados de ambas pantalla. */
@@ -31,7 +21,7 @@ function showresult(){
 
 }
 
-/* es una función que limpia el array digitos y resetea las pantallas de la calculadora. */
+/* es una función que limpia el array digitos y resetea. */
 
 function clearresult (){
     digitos.length = 0;
@@ -52,14 +42,11 @@ function removeDigitos (){
 boton.forEach(btn => {
     btn.addEventListener("click", (e) =>{
 
-        if(activarPantalla.classList.contains("desactivarPantalla")) toNormal();
         if(e.target.textContent == "=") return showresult();
         if(e.target.textContent == "del") return removeDigitos();
         if(e.target.textContent == "C") return clearresult();
         digitos.push(e.target.textContent);
         update();
-    
-        
     })
 
 });

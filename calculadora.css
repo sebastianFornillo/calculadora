@@ -4,7 +4,7 @@
 --background-color: black;
 --neutral: rgb(6%, 12%, 19%);
 --text-size: 2rem;
---primarycolor: dodgerblue; 
+--primarycolor: rgb(30, 144, 155);
 }
 
 *,
@@ -103,5 +103,4 @@ font-size: calc(var(--text-size)*1.1);
             color: var(--background-color);
         }
         
-    
-        
+   
