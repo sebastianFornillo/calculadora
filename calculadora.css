@@ -1,0 +1,107 @@
+:root {
+--text-color: white;
+--text-color-inactive:  rgba(100%, 100% ,100% ,.8);
+--background-color: black;
+--neutral: rgb(6%, 12%, 19%);
+--text-size: 2rem;
+--primarycolor: dodgerblue; 
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    transition: all .9s linear;
+}
+
+body{
+    font-family:sans-serif;
+    background-image: url("https://th.bing.com/th/id/OIP.IFl9VLIT4paA-QywEl1h5QHaKD?pid=ImgDet&w=770&h=1046&rs=1");
+    color:var(--text-color);
+    font-weight: 500;
+    font-size: var(--text-size);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0px;
+}
+
+main{
+    max-width: 400px;
+    overflow: hidden;
+    width: 95vh;
+    border: 3px solid var(--text-color);
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.pantalla{
+    background: rgba(255, 255, 255,0.049);
+    backdrop-filter: blur(22px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    gap:10px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.activar-pantalla{
+font-size: calc(var(--text-size)*1.1);
+}
+
+.desactivar-pantalla{
+    color:var(--text-color-inactive);
+    font-size: calc(var(--tex-size)*.8);
+    font-weight: normal;
+}
+
+.btn-principal{
+    
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: space-between;
+    background: var(--neutral);
+    width: 100%;
+    gap: 5px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.btn{
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+    .activo{
+        color: dodgerblue ;
+        
+
+    }
+    .activo:hover{
+        background: var(--primarycolor) !important;
+        color: var(--background-color);
+        }
+        .btn:hover{
+            color:var(--text-color);
+            backdrop-filter: blur(12px);
+        }
+
+        .longitud{
+            grid-row: span 1;
+            aspect-ratio: auto;
+            border-radius: 1rem;
+            background: var(--primarycolor);
+            color: var(--background-color);
+        }
+        
+    
+        
